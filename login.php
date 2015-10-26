@@ -1,9 +1,4 @@
-<?php
-if (!empty($_GET)) {
-    $login_error = $_GET['e'];
-}
-?>
-<!--TODO Put this form into a nicely styled react modal window-->
+<!--TODO Put this form into a nicely styled react modal window||tooltip-->
 <form name="loginform" method="post" action="conf.php">
     <label for="username">Benutzername </label>
     <input type="text" name="username" id="username" required autofocus><br><br>
@@ -14,7 +9,7 @@ if (!empty($_GET)) {
 </form>
 <div>
     <?php
-    if (!empty($login_error)) {
+    if (!empty($_GET['e'])) {
         echo "<span style='color:red; font-weight: bold'>Falsche Logindaten!!!</span>";
     }
 
