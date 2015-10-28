@@ -2,7 +2,7 @@
 
 $username = "icream";
 $password = "gRFsS9P2AWakaVe";
-$host = "http://iscream.cc/";
+$host = "localhost";
 $dbname = "iscream";
 
 $options = array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8');
