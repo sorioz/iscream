@@ -14,6 +14,9 @@ require("common.php");
     <!--[if IE]>
     <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css"/>
     <![endif]-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.0/react.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.0/react-dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.24/browser.min.js"></script>
     <script src="js/script.js"></script>
 </head>
 <body>
@@ -33,6 +36,8 @@ require("common.php");
         <h1>iScream</h1>
     </div>
     <div id="screams">
+
+
         <?php
 
         if (!empty($_SESSION['myuser_name'])) {
@@ -44,5 +49,16 @@ require("common.php");
 <footer>
 
 </footer>
+<script type="text/babel">
+
+    var React = require('react');
+    var ReactDOM = require('react-dom');
+
+    ReactDOM.render(
+    < h1 > Hello, world! < / h1 >,
+        document.getElementById('screams')
+    );
+
+</script>
 </body>
 </html>
