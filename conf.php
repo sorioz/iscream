@@ -1,4 +1,5 @@
 ﻿<?php
+ob_start();
 require("common.php");
 $submitted_username = '';
 
@@ -50,5 +51,5 @@ if (!empty($_POST)) {
         $submitted_username = htmlentities($_POST['username'], ENT_QUOTES, 'UTF-8');
     }
 }
-
+ob_end_flush();
 ?>

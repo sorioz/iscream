@@ -24,9 +24,9 @@ require("common.php");
     <header><i class="fa fa-facebook"></i><i class="fa fa-twitter"></i>
         <?php
         if (!empty($_SESSION['myuser_name'])) {
-            echo '<a href="logout.php" title="logout" class="log"><i class="fa fa-lock"></i></a>';
+            echo '<a href="logout.php" title="logout" class="log"><i class="fa fa-unlock"></i></a>';
         } else
-            echo '<a href="login.php" title="login" class="log"><i class="fa fa-unlock"></i></a>';
+            echo '<a href="login.php" title="login" class="log"><i class="fa fa-lock"></i></a>';
         ?>
 
         <i class="fa fa-cog fa-spin"></i></header>
