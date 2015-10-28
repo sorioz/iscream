@@ -7,7 +7,7 @@ if (!empty($_POST)) {
             SELECT
                 name,
                 pw
-				FROM user
+				FROM User
             WHERE
                 name = :username
         ";
