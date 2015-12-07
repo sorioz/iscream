@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 require("common.php");
 ob_start();
 $submitted_username = '';
