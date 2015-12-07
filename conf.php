@@ -1,8 +1,8 @@
 ﻿<?php
-ob_start();
 require("common.php");
+ob_start();
 $submitted_username = '';
-
+error_reporting(E_ALL);
 if (!empty($_POST)) {
     $query = "
             SELECT
