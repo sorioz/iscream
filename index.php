@@ -44,6 +44,7 @@ require("common.php");
 
 </footer>
 <script type="text/babel">
+    /*TODO Use code from jsBIN*/
     function Foo() {
         return (
             <form action="insert.php" method="post">
@@ -56,8 +57,7 @@ require("common.php");
 
     function Container() {
         return (
-            <div id="myMessageWrapper">
-                <div>My Messenger</div>
+            <div>
                 <Foo/>
             </div>
         )

@@ -97,7 +97,9 @@ footer {
 .log {
   color: #333333; }
 
-#myMessageWrapper {
-  position: absolute; }
+#myInput {
+  position: absolute;
+  bottom: 16%;
+  right: 0; }
 
 /*# sourceMappingURL=screen.css.map */
