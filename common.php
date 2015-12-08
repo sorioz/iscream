@@ -1,7 +1,7 @@
 <?php
 
-$username = "icream";
-$password = "gRFsS9P2AWakaVe";
+$username = "root";
+$password = "";
 $host = "localhost";
 $dbname = "iscream";
 
@@ -22,8 +22,6 @@ $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 
 header('Content-Type: text/html; charset=utf-8');
-
-session_start();
-
-
-?>
+if(!isset($_SESSION)) {
+    session_start();
+}

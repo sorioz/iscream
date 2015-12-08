@@ -14,10 +14,9 @@ require("common.php");
     <!--[if IE]>
     <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css"/>
     <![endif]-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.0/react.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.0/react-dom.min.js"></script>
+    <script src="http://fb.me/react-0.14.2.js"></script>
+    <script src="http://fb.me/react-dom-0.14.2.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.24/browser.min.js"></script>
-    <script src="js/script.js"></script>
 </head>
 <body>
 <div id="main">
@@ -35,39 +34,36 @@ require("common.php");
 
         <h1>iScream</h1>
     </div>
-    <div id="screams">
-
-
-        <?php
-
-        if (!empty($_SESSION['myuser_name'])) {
-            include 'screams.php';
-        }
-        ?>
-    </div>
+    <?php
+    if (!empty($_SESSION['myuser_name'])) {
+        echo "<div id='myInput'></div><div id='screams'>";include('getscreams.php'); echo "</div>";
+    }
+    ?>
 </div>
 <footer>
 
 </footer>
 <script type="text/babel">
-    var Demo = React.createClass({
-        render: function () {
-            return (
-                < h1 > React.js
-            Radio
-            Group
-            Demo < / h1 >
-            )
+    function Foo() {
+        return (
+            <form action="insert.php" method="post">
+            <textarea name="scream" rows="4" cols="50"></textarea><br/>
+            <button type="submit">Senden</button>
+            </form>
+        )
             ;
-        }
-    });
+    };
 
-
-    ReactDOM.render(
-    < Demo / >,
-        document.getElementById('screams')
-    );
-
+    function Container() {
+        return (
+            <div id="myMessageWrapper">
+                <div>My Messenger</div>
+                <Foo/>
+            </div>
+        )
+            ;
+    };
+    ReactDOM.render(<Container/>, document.getElementById("myInput"));
 </script>
 </body>
 </html>

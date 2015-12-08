@@ -40,7 +40,7 @@ if (!empty($_POST)) {
 
     if ($login_ok) {
         unset($row['password']);
-        $_SESSION['myuser_name'] = $row;
+        $_SESSION['myuser_name'] = $row['name'];
         header("Location: index.php");
         die("Redirecting to: index.php");
 
